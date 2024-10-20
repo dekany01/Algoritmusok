@@ -17,12 +17,12 @@ import sys
 
 def superDigit(n, k):
    
-    if len(n) == 1 and k == 1:        # Alapeset, amikor a megadott sztring (szám) 1 karakterhosszú (1 számjegyből áll) és a 'k' szorzó értéke 1
+    if len(n) == 1 and k == 1:        # Alapeset, amikor a megadott sztring (szám) 1 karakterhosszú (1 számjegyből áll) és a 'k' szorzó értéke 1:
         return int(n)                 # ekkor magát a számjegyet (egy 0-9 közötti egész számot) adja vissza
         
-    else:                                                                  # Ha 1-nél több karakterhosszú a sztring, 
-        s1, s2 = n[:len(string)//2], n[len(string)//2:]                    # Akkor a sztringet ketté választom s1 és s2 részre(ha n páros, akkor s1 és s2 ugyanakkora, n/2 nagyságú sztring,
-                                                                           # ha páratlan, akkor egy (n-1/2) és egy (n-1/2 + 1) nagyságú részre tagolja a sztringet).
+    else:                                                                  # Ha 1-nél több karakterhosszú a sztring: 
+        s1, s2 = n[:len(n)//2], n[len(n)//2:]                              # akkor a sztringet ketté választom s1 és s2 részre(ha n páros, akkor s1 és s2 ugyanakkora, len(n)/2 nagyságú sztring,
+                                                                           # ha páratlan, akkor egy (len(n)-1/2) és egy (len(n-1)/2 + 1) nagyságú részre tagolja a sztringet).
         
         return superDigit(str(k*(superDigit(s1,1)+superDigit(s2,1))),1)    # Ezután rekurzívan meghívja a 'superDigit()' függvényt mindkét részre külön-külön. 
                                                                            # A kapott értékeket összeadja és megszorozza k-val, majd az így kapott új sztring (szám) superDigit-jét adja vissza.
