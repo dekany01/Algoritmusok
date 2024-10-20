@@ -39,4 +39,7 @@ Az **x** egész szám *szuperszámjegyét* az alábbi szabályok segítségével
 > A föggvény **visszatér** a megadott *n* szám szuperszámjegyének 'int'-ben megadott értékével.
 >
 > Beviteli formátuma: két egész szám szóközzel elválasztva (*n* és *k*)
-> 
+>
+> Korlátok:
+>   * 1 $\le$ n $\le$ 10<sup>100000</sup>
+>   * 1 $\le$ k $\le$ 10<sup>5</sup>
