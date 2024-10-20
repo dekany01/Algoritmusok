@@ -36,7 +36,7 @@ Az **x** egész szám *szuperszámjegyét* az alábbi szabályok segítségével
 > * string n : az egész szám sztring alakban
 > * int k : hányszor fűzzük össze a kapott stringet önmagával
 >
-> A föggvény **visszatér** a megadott *n* szám szuperszámjegyének 'int'-ben megadott értékével.
+> A függvény **visszatér** a megadott *n* szám szuperszámjegyének 'int'-ben megadott értékével.
 >
 > Beviteli formátuma: két egész szám szóközzel elválasztva (*n* és *k*)
 >
