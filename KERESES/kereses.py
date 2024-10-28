@@ -24,15 +24,17 @@ def pairs(k, arr):
     for i in range(len(arr)): # Végig iterálunk a lista elemein.
         
         for j in range(i, len(arr)): # Megnézzük az adott elemtől jobbra lévő (tehát nagyobb) számokat a listában.
+           
+            if arr[j] > arr[i] + k:    # Ha az i. indexű elemtől jobbra lévő aktuális egész szám nagyobb, mint a különbség + az i. indexű elem, akkor nincs értelme tovább keresni az i. indexű elem párját.
+                break
             
-            if arr[j] == arr[i] + k:  # Ha az i. indexű elemtől jobbra lévő aktuális egész szám akkora, mint az i. indexű elem + a célzott különbség,
-                                      # akkor megtaláltuk az i. indexű elem párját.
+            elif arr[j] == arr[i] + k:  # Ha az i. indexű elemtől jobbra lévő aktuális egész szám akkora, mint az i. indexű elem + a célzott különbség,
+                                        # akkor megtaláltuk az i. indexű elem párját.
 
                 sumDiff += 1            # Hozzáadunk a számlálóhoz 1-et, majd
                 break                   # kilépünk a belső ciklusból.
            
-            elif arr[j] > arr[i] + k:    # Ha az i. indexű elemtől jobbra lévő aktuális egész szám nagyobb, mint a különbség + az i. indexű elem, akkor nincs értelme tovább keresni az i. indexű elem párját.
-                break
+            
     
     return sumDiff         # A végén visszaadja a függvény a talált párok számát.
 
