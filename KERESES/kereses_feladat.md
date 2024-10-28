@@ -3,36 +3,29 @@
 ## [Link](https://www.hackerrank.com/challenges/pairs/problem)
 
 ## Leírás:
-> A feladat során egy egész számokból álló ***arr*** tömböt kapunk, valamint egy ***k*** egész számot.
-> Az *arr* tömbből *k* elemből álló ***arr'*** résztömböket  kell létrehozni. Majd vesszük ezeknek a résztömböknek az "igazságtalanságát" (unfairness) és azok közül meg kell határozni a legkisebb értéket.
-> 
-> Egy tömb "igazságtalansága" így számítható ki: `max(arr') - min(arr')`
->
-> ahol:
->   *  a *max(arr')* az *arr'* résztömb legnagyobb elemét (egész számot) jelöli
->   *  a *min(arr')* az *arr'* résztömb legkisebb elemét (egész számot) jelöli
-> 
+> A feladat során egy egész számokból álló ***arr*** tömböt és egy **k** célszámot kapunk, utóbbi megadja, hogy egymástól milyen távolságra lévő számmal ( a két szám különbsége tehát a *'k'*) alkothatnak a tömb elemei egy párt.
+
 **Konkrét példa:**
-> *arr* = [1,4,7,2]
+> *arr* = [1,2,3,4]
 > 
-> *k* = 2
+> *k* = 1
 > 
->  Vesszük bármely két elemet, pl. ***arr' = [4,7]***
-> 
->  Ekkor: ***unfairness = max(4,7) - min(4,7) = 7 - 4 = 3***  
+>  Ebben az esetben összesen 3 pár van, aminek különbsége pontosan **k = 1** :
 >
->   Minden résztömbre letesztelve végül a megoldást az [1,2] résztömb adja (ennél az érték 1 lesz).
+> * 2 - 1 = 1, 3 - 2 = 1 és 4 - 3 = 1
 >
-> ***Megjegyzés:*** az *arr* tömb nem csak különböző egész számokat tartalmazhat.
+> * az eredmény tehát **3**
 
 **A függvény:**
-> maxMin() függvény paraméterei:
-> * int k : egész szám (résztömbök elemszámát adja meg)
+> pairsn() függvény paraméterei:
+> * int k : egész szám (a célzott különbség)
 > * int arr[n] : egész számok tömbje
 >
-> A függvény **visszatér** a megadott értékek alapján a legkisebb "igazságtalansági" értékkel.
+> A függvény **visszatér** a megadott értékek alapján a fenti kritériumoknak megfelelő párok számával.
 >
 > Korlátok:
 >   * n = ***arr*** tömb elemszáma
->   * 2 $\le$ k $\le$ n
->   * 0 $\le$ arr[i] $\le$ 10<sup>9</sup>
+>   * 2 $\le$ n $\le$ 10<sup>5</sup>
+>   * 0 $\le$ k $\le$ 10<sup>9</sup>
+>   * 0 $\le$ arr[i] $\le$ 2<sup>31</sup>-1 
+
