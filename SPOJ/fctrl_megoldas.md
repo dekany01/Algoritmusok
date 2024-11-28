@@ -48,3 +48,13 @@ Először meg kell néznünk, hogy az adott *N* számban az 5 hányszor van meg.
 Ezután, ha 24-nél nagyobb számról van szó, megnézzük, hogy 25-tel osztva az eredeti számot, milyen egész számot kapunk.
 Ha 124-nél nagyobb számról van szó, megnézzük, hogy 125-tel osztva az eredeti számot, milyen egész számot kapunk és így tovább szorozzuk tovább 5-tel az osztót, amíg az osztó nem nagyobb, mint az eredeti *N* számunk.
 A kapott egész értékeket összeadjuk, ez adja a végeredményt.
+
+> *pl. 132! esetén:*
+> int (132 / 5) = 26, 
+> int (132 / 25) = 5, 
+> int (132 / 125) = 1, 
+>
+> Miután 625 > 132, itt megállunk és összesítjük a kapott eredményeket: 26 + 5 + 1 = 32
+>
+> Vagyis 32 db "0" van egymás után a szám végén. "...0000000"
+> 
